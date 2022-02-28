@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:astro_people/app/common/common.dart';
 import 'package:astro_people/app/common/enum/dialog.dart';
 import 'package:astro_people/app/common/style/style.dart';
-import 'package:astro_people/app/common/utils/form_field_validator.dart';
 import 'package:astro_people/app/core/domain/entities/entities.dart';
 import 'package:astro_people/app/core/presentation/manager/profile/profile_bloc.dart';
 import 'package:astro_people/app/core/presentation/widgets/drop_down_button/drop_down_form_field.dart';
@@ -227,10 +226,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                     FilteringTextInputFormatter.allow(
                                         RegExp('[a-zA-Z ]')),
                                   ],
-                                  validator: FormFieldValidators.compose([
-                                    FormFieldValidators.required(
-                                        'Enter valid name'),
-                                  ]),
+                                  validator: nameValidator,
                                   decoration: InputDecoration(
                                       filled: true,
                                       fillColor: textFormFieldFilledColor,
@@ -238,6 +234,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                           textFormFieldContentPadding,
                                       hintText: 'Name',
                                       border: textFormFieldBorder),
+                                  autovalidateMode:
+                                      AutovalidateMode.onUserInteraction,
+                                  autocorrect: true,
                                 ),
                               ),
                             ),
@@ -257,12 +256,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         keyboardType:
                                             TextInputType.numberWithOptions(
                                                 decimal: false),
-                                        validator: FormFieldValidators.compose([
-                                          FormFieldValidators.required(
-                                              'Invalid DD'),
-                                          FormFieldValidators.min(
-                                              2, 'Invalid DD'),
-                                        ]),
+                                        validator: dayValidator,
                                         maxLength: 2,
                                         decoration: InputDecoration(
                                             filled: true,
@@ -271,6 +265,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                                 textFormFieldContentPadding,
                                             hintText: 'DD',
                                             border: textFormFieldBorder),
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        autocorrect: true,
                                       ),
                                     ),
                                   ),
@@ -290,12 +287,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         keyboardType:
                                             TextInputType.numberWithOptions(
                                                 decimal: false),
-                                        validator: FormFieldValidators.compose([
-                                          FormFieldValidators.required(
-                                              'Invalid MM'),
-                                          FormFieldValidators.min(
-                                              2, 'Invalid MM'),
-                                        ]),
+                                        validator: monthValidator,
                                         maxLength: 2,
                                         decoration: InputDecoration(
                                             filled: true,
@@ -304,6 +296,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                                 textFormFieldContentPadding,
                                             hintText: 'MM',
                                             border: textFormFieldBorder),
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        autocorrect: true,
                                       ),
                                     ),
                                   ),
@@ -323,12 +318,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         keyboardType:
                                             TextInputType.numberWithOptions(
                                                 decimal: false),
-                                        validator: FormFieldValidators.compose([
-                                          FormFieldValidators.required(
-                                              'Invalid YYYY'),
-                                          FormFieldValidators.min(
-                                              4, 'Invalid YYYY'),
-                                        ]),
+                                        validator: yearValidator,
                                         maxLength: 4,
                                         decoration: InputDecoration(
                                             filled: true,
@@ -337,6 +327,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                                 textFormFieldContentPadding,
                                             hintText: 'YYYY',
                                             border: textFormFieldBorder),
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        autocorrect: true,
                                       ),
                                     ),
                                   ),
@@ -359,12 +352,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         keyboardType:
                                             TextInputType.numberWithOptions(
                                                 decimal: false),
-                                        validator: FormFieldValidators.compose([
-                                          FormFieldValidators.required(
-                                              'Invalid HH'),
-                                          FormFieldValidators.min(
-                                              2, 'Invalid HH')
-                                        ]),
+                                        validator: hourValidator,
                                         maxLength: 2,
                                         decoration: InputDecoration(
                                             filled: true,
@@ -373,6 +361,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                                 textFormFieldContentPadding,
                                             hintText: 'HH',
                                             border: textFormFieldBorder),
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        autocorrect: true,
                                       ),
                                     ),
                                   ),
@@ -392,12 +383,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         keyboardType:
                                             TextInputType.numberWithOptions(
                                                 decimal: false),
-                                        validator: FormFieldValidators.compose([
-                                          FormFieldValidators.required(
-                                              'Invalid MM'),
-                                          FormFieldValidators.min(
-                                              2, 'Invalid MM')
-                                        ]),
+                                        validator: minuteValidator,
                                         maxLength: 2,
                                         decoration: InputDecoration(
                                             filled: true,
@@ -406,6 +392,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                                 textFormFieldContentPadding,
                                             hintText: 'MM',
                                             border: textFormFieldBorder),
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        autocorrect: true,
                                       ),
                                     ),
                                   ),
@@ -498,10 +487,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                                     FetchLocationByText(value));
                                           }
                                         },
-                                        validator: FormFieldValidators.compose([
-                                          FormFieldValidators.required(
-                                              'Please select a city'),
-                                        ]),
+                                        validator: placeOfBirthValidator,
                                       ),
                                     )
                                   ],
@@ -542,11 +528,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                               filled: true,
                                               required: true,
                                               errorText: 'Invalid Gender',
-                                              validator:
-                                                  FormFieldValidators.compose([
-                                                FormFieldValidators.required(
-                                                    'Invalid Gender'),
-                                              ]),
+                                              validator: genderValidator,
                                               titleText: '',
                                               hintText: '',
                                               value: myGender,
@@ -605,11 +587,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                               filled: true,
                                               required: true,
                                               errorText: 'Invalid Relation',
-                                              validator:
-                                                  FormFieldValidators.compose([
-                                                FormFieldValidators.required(
-                                                    'Invalid Relation'),
-                                              ]),
+                                              validator: relationValidator,
                                               titleText: '',
                                               hintText: '',
                                               value: myRelationShip,
