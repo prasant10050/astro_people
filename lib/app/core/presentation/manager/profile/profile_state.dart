@@ -87,4 +87,5 @@ class ProfileState with _$ProfileState {
           String relationShip, int relationShipId,
           [@Default([]) List<Relation> listOfAllRelations]) =
       SetCurrentRelationShipState;
+  const factory ProfileState.setMeridiemState(int selectedMedidiem,[@Default([true, false]) List<bool> isSelected]) = SetMeridiemState;
 }

@@ -211,6 +211,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                             },
                             setCurrentGenderState: (gender) {
                               myGender = gender;
+                            },
+                            setMeridiemState: (index, currentSelected) {
+                              isSelected = currentSelected.toList();
                             });
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -409,17 +412,9 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                             minWidth: 48.0, minHeight: 45),
                                         isSelected: isSelected,
                                         onPressed: (int index) {
-                                          setState(() {
-                                            for (var indexBtn = 0;
-                                                indexBtn < isSelected.length;
-                                                indexBtn++) {
-                                              if (indexBtn == index) {
-                                                isSelected[indexBtn] = true;
-                                              } else {
-                                                isSelected[indexBtn] = false;
-                                              }
-                                            }
-                                          });
+                                          BlocProvider.of<ProfileBloc>(context)
+                                              .add(SetMeridiem(
+                                                  index, isSelected));
                                         },
                                         children: const <Widget>[
                                           Text('AM'),

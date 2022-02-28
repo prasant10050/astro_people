@@ -42,4 +42,6 @@ class ProfileEvent with _$ProfileEvent {
   const factory ProfileEvent.setCurrentRelationShip(String relationShip,
           [@Default([]) List<Relation> listOfAllRelations]) =
       SetCurrentRelationShip;
+  const factory ProfileEvent.setMeridiem(int selectedMedidiem,
+      [@Default([true, false]) List<bool> isSelected]) = SetMeridiem;
 }

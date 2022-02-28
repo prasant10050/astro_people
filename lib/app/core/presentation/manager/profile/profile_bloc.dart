@@ -40,6 +40,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<UpdateCurrentUserProfile>(_updateCurrentUserProfile);
     on<SetCurrentGener>(_setCurrentGender);
     on<SetCurrentRelationShip>(_setCurrentRelationShip);
+    on<SetMeridiem>(_setMeridiem);
   }
 
   final GetLocationByTextData getLocationByTextData;
@@ -98,52 +99,6 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
   FutureOr<void> _addNewRelativeProfile(
       AddNewRelativeProfile event, Emitter<ProfileState> emit) async {
-/*    var dob = event.relativeProfileParams.birthDetails;
-    if (dob != null) {
-      if (DateValidator.isValidDate(
-              '${dob.dobDay}/${dob.dobMonth}/${dob.dobYear}') &&
-          DateValidator.isValidTime(
-              '${dob.dobDay}/${dob.dobMonth}/${dob.dobYear}T${dob.tobHour}:${dob.tobMin} ${dob.meridiem}')) {
-        emit(ProfileState.relativeProfileOperationLoading());
-        final response =
-            await addNewRelativeProfileUseCase(event.relativeProfileParams);
-        return response.fold((l) {
-          emit(
-            ProfileState.relativeProfileOperationFailure(message: l.message),
-          );
-        }, (r) {
-          emit(ProfileState.addNewRelativeProfile(event.relativeProfileParams));
-        });
-      } else if (!DateValidator.isValidTime(
-              '${dob.dobDay}/${dob.dobMonth}/${dob.dobYear}T${dob.tobHour}:${dob.tobMin} ${dob.meridiem}') &&
-          !DateValidator.isValidDate(
-              '${dob.dobDay}/${dob.dobMonth}/${dob.dobYear}')) {
-        emit(
-          ProfileState.relativeProfileOperationFailure(
-              message: 'Invalid Date & Time of Birth'),
-        );
-        return;
-      } else if (!DateValidator.isValidDate(
-          '${dob.dobDay}/${dob.dobMonth}/${dob.dobYear}')) {
-        emit(
-          ProfileState.relativeProfileOperationFailure(
-              message: 'Invalid Date of Birth'),
-        );
-        return;
-      } else {
-        emit(
-          ProfileState.relativeProfileOperationFailure(
-              message: 'Invalid Time of Birth'),
-        );
-        return;
-      }
-    } else {
-      emit(
-        ProfileState.relativeProfileOperationFailure(
-            message: 'Invalid Date or Time of Birth'),
-      );
-      return;
-    }*/
     emit(ProfileState.relativeProfileOperationLoading());
     final response =
         await addNewRelativeProfileUseCase(event.relativeProfileParams);
@@ -257,6 +212,24 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
     emit(ProfileState.setCurrentRelationShipState(
         event.relationShip, relation.id ?? 0, event.listOfAllRelations));
+    return;
+  }
+
+  FutureOr<void> _setMeridiem(
+      SetMeridiem event, Emitter<ProfileState> emit) async {
+    List<bool> updateSelectedMeridiem = [];
+    updateSelectedMeridiem.addAll(event.isSelected.toList());
+    for (var indexBtn = 0;
+        indexBtn < updateSelectedMeridiem.length;
+        indexBtn++) {
+      if (indexBtn == event.selectedMedidiem) {
+        updateSelectedMeridiem[indexBtn] = true;
+      } else {
+        updateSelectedMeridiem[indexBtn] = false;
+      }
+    }
+    emit(ProfileState.setMeridiemState(
+        event.selectedMedidiem, updateSelectedMeridiem));
     return;
   }
 }

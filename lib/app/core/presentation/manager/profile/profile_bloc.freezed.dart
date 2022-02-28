@@ -109,6 +109,14 @@ class _$ProfileEventTearOff {
       listOfAllRelations,
     );
   }
+
+  SetMeridiem setMeridiem(int selectedMedidiem,
+      [List<bool> isSelected = const [true, false]]) {
+    return SetMeridiem(
+      selectedMedidiem,
+      isSelected,
+    );
+  }
 }
 
 /// @nodoc
@@ -145,6 +153,8 @@ mixin _$ProfileEvent {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -175,6 +185,7 @@ mixin _$ProfileEvent {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -205,6 +216,7 @@ mixin _$ProfileEvent {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -229,6 +241,7 @@ mixin _$ProfileEvent {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -247,6 +260,7 @@ mixin _$ProfileEvent {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -265,6 +279,7 @@ mixin _$ProfileEvent {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -379,6 +394,8 @@ class _$FetchLocationByText implements FetchLocationByText {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return fetchLocationByText(textLocation);
   }
@@ -412,6 +429,7 @@ class _$FetchLocationByText implements FetchLocationByText {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return fetchLocationByText?.call(textLocation);
   }
@@ -445,6 +463,7 @@ class _$FetchLocationByText implements FetchLocationByText {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchLocationByText != null) {
@@ -475,6 +494,7 @@ class _$FetchLocationByText implements FetchLocationByText {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return fetchLocationByText(this);
   }
@@ -496,6 +516,7 @@ class _$FetchLocationByText implements FetchLocationByText {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return fetchLocationByText?.call(this);
   }
@@ -517,6 +538,7 @@ class _$FetchLocationByText implements FetchLocationByText {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchLocationByText != null) {
@@ -653,6 +675,8 @@ class _$SaveChanges implements SaveChanges {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return saveChanges(relativeProfileParams, profileChange, relativeId);
   }
@@ -686,6 +710,7 @@ class _$SaveChanges implements SaveChanges {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return saveChanges?.call(relativeProfileParams, profileChange, relativeId);
   }
@@ -719,6 +744,7 @@ class _$SaveChanges implements SaveChanges {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (saveChanges != null) {
@@ -749,6 +775,7 @@ class _$SaveChanges implements SaveChanges {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return saveChanges(this);
   }
@@ -770,6 +797,7 @@ class _$SaveChanges implements SaveChanges {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return saveChanges?.call(this);
   }
@@ -791,6 +819,7 @@ class _$SaveChanges implements SaveChanges {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (saveChanges != null) {
@@ -880,6 +909,8 @@ class _$FetchAllRelatives implements FetchAllRelatives {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return fetchAllRelatives();
   }
@@ -913,6 +944,7 @@ class _$FetchAllRelatives implements FetchAllRelatives {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return fetchAllRelatives?.call();
   }
@@ -946,6 +978,7 @@ class _$FetchAllRelatives implements FetchAllRelatives {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchAllRelatives != null) {
@@ -976,6 +1009,7 @@ class _$FetchAllRelatives implements FetchAllRelatives {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return fetchAllRelatives(this);
   }
@@ -997,6 +1031,7 @@ class _$FetchAllRelatives implements FetchAllRelatives {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return fetchAllRelatives?.call(this);
   }
@@ -1018,6 +1053,7 @@ class _$FetchAllRelatives implements FetchAllRelatives {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchAllRelatives != null) {
@@ -1125,6 +1161,8 @@ class _$AddNewRelativeProfile implements AddNewRelativeProfile {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return addNewRelativeProfile(relativeProfileParams);
   }
@@ -1158,6 +1196,7 @@ class _$AddNewRelativeProfile implements AddNewRelativeProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return addNewRelativeProfile?.call(relativeProfileParams);
   }
@@ -1191,6 +1230,7 @@ class _$AddNewRelativeProfile implements AddNewRelativeProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (addNewRelativeProfile != null) {
@@ -1221,6 +1261,7 @@ class _$AddNewRelativeProfile implements AddNewRelativeProfile {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return addNewRelativeProfile(this);
   }
@@ -1242,6 +1283,7 @@ class _$AddNewRelativeProfile implements AddNewRelativeProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return addNewRelativeProfile?.call(this);
   }
@@ -1263,6 +1305,7 @@ class _$AddNewRelativeProfile implements AddNewRelativeProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (addNewRelativeProfile != null) {
@@ -1386,6 +1429,8 @@ class _$EditRelativeProfile implements EditRelativeProfile {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return editRelativeProfile(relativeProfileParams, relativeId);
   }
@@ -1419,6 +1464,7 @@ class _$EditRelativeProfile implements EditRelativeProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return editRelativeProfile?.call(relativeProfileParams, relativeId);
   }
@@ -1452,6 +1498,7 @@ class _$EditRelativeProfile implements EditRelativeProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (editRelativeProfile != null) {
@@ -1482,6 +1529,7 @@ class _$EditRelativeProfile implements EditRelativeProfile {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return editRelativeProfile(this);
   }
@@ -1503,6 +1551,7 @@ class _$EditRelativeProfile implements EditRelativeProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return editRelativeProfile?.call(this);
   }
@@ -1524,6 +1573,7 @@ class _$EditRelativeProfile implements EditRelativeProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (editRelativeProfile != null) {
@@ -1664,6 +1714,8 @@ class _$RemoveRelativeProfile implements RemoveRelativeProfile {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return removeRelativeProfile(
         relativeProfileParams, dialogButton, relativeId);
@@ -1698,6 +1750,7 @@ class _$RemoveRelativeProfile implements RemoveRelativeProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return removeRelativeProfile?.call(
         relativeProfileParams, dialogButton, relativeId);
@@ -1732,6 +1785,7 @@ class _$RemoveRelativeProfile implements RemoveRelativeProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (removeRelativeProfile != null) {
@@ -1763,6 +1817,7 @@ class _$RemoveRelativeProfile implements RemoveRelativeProfile {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return removeRelativeProfile(this);
   }
@@ -1784,6 +1839,7 @@ class _$RemoveRelativeProfile implements RemoveRelativeProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return removeRelativeProfile?.call(this);
   }
@@ -1805,6 +1861,7 @@ class _$RemoveRelativeProfile implements RemoveRelativeProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (removeRelativeProfile != null) {
@@ -1932,6 +1989,8 @@ class _$OpenRemoveDialogBox implements OpenRemoveDialogBox {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return openRemoveDialogBox(relativeProfileParams, relativeId);
   }
@@ -1965,6 +2024,7 @@ class _$OpenRemoveDialogBox implements OpenRemoveDialogBox {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return openRemoveDialogBox?.call(relativeProfileParams, relativeId);
   }
@@ -1998,6 +2058,7 @@ class _$OpenRemoveDialogBox implements OpenRemoveDialogBox {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (openRemoveDialogBox != null) {
@@ -2028,6 +2089,7 @@ class _$OpenRemoveDialogBox implements OpenRemoveDialogBox {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return openRemoveDialogBox(this);
   }
@@ -2049,6 +2111,7 @@ class _$OpenRemoveDialogBox implements OpenRemoveDialogBox {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return openRemoveDialogBox?.call(this);
   }
@@ -2070,6 +2133,7 @@ class _$OpenRemoveDialogBox implements OpenRemoveDialogBox {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (openRemoveDialogBox != null) {
@@ -2159,6 +2223,8 @@ class _$FetchAllRelations implements FetchAllRelations {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return fetchAllRelations();
   }
@@ -2192,6 +2258,7 @@ class _$FetchAllRelations implements FetchAllRelations {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return fetchAllRelations?.call();
   }
@@ -2225,6 +2292,7 @@ class _$FetchAllRelations implements FetchAllRelations {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchAllRelations != null) {
@@ -2255,6 +2323,7 @@ class _$FetchAllRelations implements FetchAllRelations {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return fetchAllRelations(this);
   }
@@ -2276,6 +2345,7 @@ class _$FetchAllRelations implements FetchAllRelations {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return fetchAllRelations?.call(this);
   }
@@ -2297,6 +2367,7 @@ class _$FetchAllRelations implements FetchAllRelations {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchAllRelations != null) {
@@ -2432,6 +2503,8 @@ class _$NavigateToRelativeProfilePage implements NavigateToRelativeProfilePage {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return navigateToRelativeProfilePage(
         profileChange, relativeProfileParams, relativeId);
@@ -2466,6 +2539,7 @@ class _$NavigateToRelativeProfilePage implements NavigateToRelativeProfilePage {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return navigateToRelativeProfilePage?.call(
         profileChange, relativeProfileParams, relativeId);
@@ -2500,6 +2574,7 @@ class _$NavigateToRelativeProfilePage implements NavigateToRelativeProfilePage {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (navigateToRelativeProfilePage != null) {
@@ -2531,6 +2606,7 @@ class _$NavigateToRelativeProfilePage implements NavigateToRelativeProfilePage {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return navigateToRelativeProfilePage(this);
   }
@@ -2552,6 +2628,7 @@ class _$NavigateToRelativeProfilePage implements NavigateToRelativeProfilePage {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return navigateToRelativeProfilePage?.call(this);
   }
@@ -2573,6 +2650,7 @@ class _$NavigateToRelativeProfilePage implements NavigateToRelativeProfilePage {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (navigateToRelativeProfilePage != null) {
@@ -2664,6 +2742,8 @@ class _$FetchCurrentUserProfile implements FetchCurrentUserProfile {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return fetchCurrentUserProfile();
   }
@@ -2697,6 +2777,7 @@ class _$FetchCurrentUserProfile implements FetchCurrentUserProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return fetchCurrentUserProfile?.call();
   }
@@ -2730,6 +2811,7 @@ class _$FetchCurrentUserProfile implements FetchCurrentUserProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchCurrentUserProfile != null) {
@@ -2760,6 +2842,7 @@ class _$FetchCurrentUserProfile implements FetchCurrentUserProfile {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return fetchCurrentUserProfile(this);
   }
@@ -2781,6 +2864,7 @@ class _$FetchCurrentUserProfile implements FetchCurrentUserProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return fetchCurrentUserProfile?.call(this);
   }
@@ -2802,6 +2886,7 @@ class _$FetchCurrentUserProfile implements FetchCurrentUserProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (fetchCurrentUserProfile != null) {
@@ -2910,6 +2995,8 @@ class _$UpdateCurrentUserProfile implements UpdateCurrentUserProfile {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return updateCurrentUserProfile(currentUserProfileEntity);
   }
@@ -2943,6 +3030,7 @@ class _$UpdateCurrentUserProfile implements UpdateCurrentUserProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return updateCurrentUserProfile?.call(currentUserProfileEntity);
   }
@@ -2976,6 +3064,7 @@ class _$UpdateCurrentUserProfile implements UpdateCurrentUserProfile {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfile != null) {
@@ -3006,6 +3095,7 @@ class _$UpdateCurrentUserProfile implements UpdateCurrentUserProfile {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return updateCurrentUserProfile(this);
   }
@@ -3027,6 +3117,7 @@ class _$UpdateCurrentUserProfile implements UpdateCurrentUserProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return updateCurrentUserProfile?.call(this);
   }
@@ -3048,6 +3139,7 @@ class _$UpdateCurrentUserProfile implements UpdateCurrentUserProfile {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfile != null) {
@@ -3160,6 +3252,8 @@ class _$SetCurrentGener implements SetCurrentGener {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return setCurrentGender(gender);
   }
@@ -3193,6 +3287,7 @@ class _$SetCurrentGener implements SetCurrentGener {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return setCurrentGender?.call(gender);
   }
@@ -3226,6 +3321,7 @@ class _$SetCurrentGener implements SetCurrentGener {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (setCurrentGender != null) {
@@ -3256,6 +3352,7 @@ class _$SetCurrentGener implements SetCurrentGener {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return setCurrentGender(this);
   }
@@ -3277,6 +3374,7 @@ class _$SetCurrentGener implements SetCurrentGener {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return setCurrentGender?.call(this);
   }
@@ -3298,6 +3396,7 @@ class _$SetCurrentGener implements SetCurrentGener {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (setCurrentGender != null) {
@@ -3423,6 +3522,8 @@ class _$SetCurrentRelationShip implements SetCurrentRelationShip {
     required TResult Function(
             String relationShip, List<Relation> listOfAllRelations)
         setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
   }) {
     return setCurrentRelationShip(relationShip, listOfAllRelations);
   }
@@ -3456,6 +3557,7 @@ class _$SetCurrentRelationShip implements SetCurrentRelationShip {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
   }) {
     return setCurrentRelationShip?.call(relationShip, listOfAllRelations);
   }
@@ -3489,6 +3591,7 @@ class _$SetCurrentRelationShip implements SetCurrentRelationShip {
     TResult Function(String gender)? setCurrentGender,
     TResult Function(String relationShip, List<Relation> listOfAllRelations)?
         setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
     required TResult orElse(),
   }) {
     if (setCurrentRelationShip != null) {
@@ -3519,6 +3622,7 @@ class _$SetCurrentRelationShip implements SetCurrentRelationShip {
     required TResult Function(SetCurrentGener value) setCurrentGender,
     required TResult Function(SetCurrentRelationShip value)
         setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
   }) {
     return setCurrentRelationShip(this);
   }
@@ -3540,6 +3644,7 @@ class _$SetCurrentRelationShip implements SetCurrentRelationShip {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
   }) {
     return setCurrentRelationShip?.call(this);
   }
@@ -3561,6 +3666,7 @@ class _$SetCurrentRelationShip implements SetCurrentRelationShip {
     TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
     TResult Function(SetCurrentGener value)? setCurrentGender,
     TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
     required TResult orElse(),
   }) {
     if (setCurrentRelationShip != null) {
@@ -3578,6 +3684,276 @@ abstract class SetCurrentRelationShip implements ProfileEvent {
   List<Relation> get listOfAllRelations;
   @JsonKey(ignore: true)
   $SetCurrentRelationShipCopyWith<SetCurrentRelationShip> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SetMeridiemCopyWith<$Res> {
+  factory $SetMeridiemCopyWith(
+          SetMeridiem value, $Res Function(SetMeridiem) then) =
+      _$SetMeridiemCopyWithImpl<$Res>;
+  $Res call({int selectedMedidiem, List<bool> isSelected});
+}
+
+/// @nodoc
+class _$SetMeridiemCopyWithImpl<$Res> extends _$ProfileEventCopyWithImpl<$Res>
+    implements $SetMeridiemCopyWith<$Res> {
+  _$SetMeridiemCopyWithImpl(
+      SetMeridiem _value, $Res Function(SetMeridiem) _then)
+      : super(_value, (v) => _then(v as SetMeridiem));
+
+  @override
+  SetMeridiem get _value => super._value as SetMeridiem;
+
+  @override
+  $Res call({
+    Object? selectedMedidiem = freezed,
+    Object? isSelected = freezed,
+  }) {
+    return _then(SetMeridiem(
+      selectedMedidiem == freezed
+          ? _value.selectedMedidiem
+          : selectedMedidiem // ignore: cast_nullable_to_non_nullable
+              as int,
+      isSelected == freezed
+          ? _value.isSelected
+          : isSelected // ignore: cast_nullable_to_non_nullable
+              as List<bool>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetMeridiem implements SetMeridiem {
+  const _$SetMeridiem(this.selectedMedidiem,
+      [this.isSelected = const [true, false]]);
+
+  @override
+  final int selectedMedidiem;
+  @JsonKey()
+  @override
+  final List<bool> isSelected;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.setMeridiem(selectedMedidiem: $selectedMedidiem, isSelected: $isSelected)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SetMeridiem &&
+            const DeepCollectionEquality()
+                .equals(other.selectedMedidiem, selectedMedidiem) &&
+            const DeepCollectionEquality()
+                .equals(other.isSelected, isSelected));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(selectedMedidiem),
+      const DeepCollectionEquality().hash(isSelected));
+
+  @JsonKey(ignore: true)
+  @override
+  $SetMeridiemCopyWith<SetMeridiem> get copyWith =>
+      _$SetMeridiemCopyWithImpl<SetMeridiem>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String textLocation) fetchLocationByText,
+    required TResult Function(RelativeProfileParams relativeProfileParams,
+            ProfileChange profileChange, String relativeId)
+        saveChanges,
+    required TResult Function() fetchAllRelatives,
+    required TResult Function(RelativeProfileParams relativeProfileParams)
+        addNewRelativeProfile,
+    required TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)
+        editRelativeProfile,
+    required TResult Function(RelativeProfileParams relativeProfileParams,
+            DialogButton dialogButton, String relativeId)
+        removeRelativeProfile,
+    required TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)
+        openRemoveDialogBox,
+    required TResult Function() fetchAllRelations,
+    required TResult Function(ProfileChange profileChange,
+            RelativeProfileParams? relativeProfileParams, String? relativeId)
+        navigateToRelativeProfilePage,
+    required TResult Function() fetchCurrentUserProfile,
+    required TResult Function(CurrentUserProfileEntity currentUserProfileEntity)
+        updateCurrentUserProfile,
+    required TResult Function(String gender) setCurrentGender,
+    required TResult Function(
+            String relationShip, List<Relation> listOfAllRelations)
+        setCurrentRelationShip,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiem,
+  }) {
+    return setMeridiem(selectedMedidiem, isSelected);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String textLocation)? fetchLocationByText,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            ProfileChange profileChange, String relativeId)?
+        saveChanges,
+    TResult Function()? fetchAllRelatives,
+    TResult Function(RelativeProfileParams relativeProfileParams)?
+        addNewRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        editRelativeProfile,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            DialogButton dialogButton, String relativeId)?
+        removeRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        openRemoveDialogBox,
+    TResult Function()? fetchAllRelations,
+    TResult Function(ProfileChange profileChange,
+            RelativeProfileParams? relativeProfileParams, String? relativeId)?
+        navigateToRelativeProfilePage,
+    TResult Function()? fetchCurrentUserProfile,
+    TResult Function(CurrentUserProfileEntity currentUserProfileEntity)?
+        updateCurrentUserProfile,
+    TResult Function(String gender)? setCurrentGender,
+    TResult Function(String relationShip, List<Relation> listOfAllRelations)?
+        setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
+  }) {
+    return setMeridiem?.call(selectedMedidiem, isSelected);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String textLocation)? fetchLocationByText,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            ProfileChange profileChange, String relativeId)?
+        saveChanges,
+    TResult Function()? fetchAllRelatives,
+    TResult Function(RelativeProfileParams relativeProfileParams)?
+        addNewRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        editRelativeProfile,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            DialogButton dialogButton, String relativeId)?
+        removeRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        openRemoveDialogBox,
+    TResult Function()? fetchAllRelations,
+    TResult Function(ProfileChange profileChange,
+            RelativeProfileParams? relativeProfileParams, String? relativeId)?
+        navigateToRelativeProfilePage,
+    TResult Function()? fetchCurrentUserProfile,
+    TResult Function(CurrentUserProfileEntity currentUserProfileEntity)?
+        updateCurrentUserProfile,
+    TResult Function(String gender)? setCurrentGender,
+    TResult Function(String relationShip, List<Relation> listOfAllRelations)?
+        setCurrentRelationShip,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)? setMeridiem,
+    required TResult orElse(),
+  }) {
+    if (setMeridiem != null) {
+      return setMeridiem(selectedMedidiem, isSelected);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchLocationByText value) fetchLocationByText,
+    required TResult Function(SaveChanges value) saveChanges,
+    required TResult Function(FetchAllRelatives value) fetchAllRelatives,
+    required TResult Function(AddNewRelativeProfile value)
+        addNewRelativeProfile,
+    required TResult Function(EditRelativeProfile value) editRelativeProfile,
+    required TResult Function(RemoveRelativeProfile value)
+        removeRelativeProfile,
+    required TResult Function(OpenRemoveDialogBox value) openRemoveDialogBox,
+    required TResult Function(FetchAllRelations value) fetchAllRelations,
+    required TResult Function(NavigateToRelativeProfilePage value)
+        navigateToRelativeProfilePage,
+    required TResult Function(FetchCurrentUserProfile value)
+        fetchCurrentUserProfile,
+    required TResult Function(UpdateCurrentUserProfile value)
+        updateCurrentUserProfile,
+    required TResult Function(SetCurrentGener value) setCurrentGender,
+    required TResult Function(SetCurrentRelationShip value)
+        setCurrentRelationShip,
+    required TResult Function(SetMeridiem value) setMeridiem,
+  }) {
+    return setMeridiem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FetchLocationByText value)? fetchLocationByText,
+    TResult Function(SaveChanges value)? saveChanges,
+    TResult Function(FetchAllRelatives value)? fetchAllRelatives,
+    TResult Function(AddNewRelativeProfile value)? addNewRelativeProfile,
+    TResult Function(EditRelativeProfile value)? editRelativeProfile,
+    TResult Function(RemoveRelativeProfile value)? removeRelativeProfile,
+    TResult Function(OpenRemoveDialogBox value)? openRemoveDialogBox,
+    TResult Function(FetchAllRelations value)? fetchAllRelations,
+    TResult Function(NavigateToRelativeProfilePage value)?
+        navigateToRelativeProfilePage,
+    TResult Function(FetchCurrentUserProfile value)? fetchCurrentUserProfile,
+    TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
+    TResult Function(SetCurrentGener value)? setCurrentGender,
+    TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
+  }) {
+    return setMeridiem?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchLocationByText value)? fetchLocationByText,
+    TResult Function(SaveChanges value)? saveChanges,
+    TResult Function(FetchAllRelatives value)? fetchAllRelatives,
+    TResult Function(AddNewRelativeProfile value)? addNewRelativeProfile,
+    TResult Function(EditRelativeProfile value)? editRelativeProfile,
+    TResult Function(RemoveRelativeProfile value)? removeRelativeProfile,
+    TResult Function(OpenRemoveDialogBox value)? openRemoveDialogBox,
+    TResult Function(FetchAllRelations value)? fetchAllRelations,
+    TResult Function(NavigateToRelativeProfilePage value)?
+        navigateToRelativeProfilePage,
+    TResult Function(FetchCurrentUserProfile value)? fetchCurrentUserProfile,
+    TResult Function(UpdateCurrentUserProfile value)? updateCurrentUserProfile,
+    TResult Function(SetCurrentGener value)? setCurrentGender,
+    TResult Function(SetCurrentRelationShip value)? setCurrentRelationShip,
+    TResult Function(SetMeridiem value)? setMeridiem,
+    required TResult orElse(),
+  }) {
+    if (setMeridiem != null) {
+      return setMeridiem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetMeridiem implements ProfileEvent {
+  const factory SetMeridiem(int selectedMedidiem, [List<bool> isSelected]) =
+      _$SetMeridiem;
+
+  int get selectedMedidiem;
+  List<bool> get isSelected;
+  @JsonKey(ignore: true)
+  $SetMeridiemCopyWith<SetMeridiem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3783,6 +4159,14 @@ class _$ProfileStateTearOff {
       listOfAllRelations,
     );
   }
+
+  SetMeridiemState setMeridiemState(int selectedMedidiem,
+      [List<bool> isSelected = const [true, false]]) {
+    return SetMeridiemState(
+      selectedMedidiem,
+      isSelected,
+    );
+  }
 }
 
 /// @nodoc
@@ -3845,6 +4229,8 @@ mixin _$ProfileState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -3901,6 +4287,8 @@ mixin _$ProfileState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -3957,6 +4345,8 @@ mixin _$ProfileState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4007,6 +4397,7 @@ mixin _$ProfileState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4046,6 +4437,7 @@ mixin _$ProfileState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4085,6 +4477,7 @@ mixin _$ProfileState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4200,6 +4593,8 @@ class _$ProfileInitialState implements ProfileInitialState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return initial();
   }
@@ -4259,6 +4654,8 @@ class _$ProfileInitialState implements ProfileInitialState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return initial?.call();
   }
@@ -4318,6 +4715,8 @@ class _$ProfileInitialState implements ProfileInitialState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -4374,6 +4773,7 @@ class _$ProfileInitialState implements ProfileInitialState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return initial(this);
   }
@@ -4416,6 +4816,7 @@ class _$ProfileInitialState implements ProfileInitialState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return initial?.call(this);
   }
@@ -4458,6 +4859,7 @@ class _$ProfileInitialState implements ProfileInitialState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -4601,6 +5003,8 @@ class _$ProfileLoadingState implements ProfileLoadingState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return loading(message, isLoading);
   }
@@ -4660,6 +5064,8 @@ class _$ProfileLoadingState implements ProfileLoadingState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return loading?.call(message, isLoading);
   }
@@ -4719,6 +5125,8 @@ class _$ProfileLoadingState implements ProfileLoadingState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -4775,6 +5183,7 @@ class _$ProfileLoadingState implements ProfileLoadingState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return loading(this);
   }
@@ -4817,6 +5226,7 @@ class _$ProfileLoadingState implements ProfileLoadingState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return loading?.call(this);
   }
@@ -4859,6 +5269,7 @@ class _$ProfileLoadingState implements ProfileLoadingState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -5009,6 +5420,8 @@ class _$ProfileFailureState implements ProfileFailureState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return failure(message, otherData);
   }
@@ -5068,6 +5481,8 @@ class _$ProfileFailureState implements ProfileFailureState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return failure?.call(message, otherData);
   }
@@ -5127,6 +5542,8 @@ class _$ProfileFailureState implements ProfileFailureState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -5183,6 +5600,7 @@ class _$ProfileFailureState implements ProfileFailureState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return failure(this);
   }
@@ -5225,6 +5643,7 @@ class _$ProfileFailureState implements ProfileFailureState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return failure?.call(this);
   }
@@ -5267,6 +5686,7 @@ class _$ProfileFailureState implements ProfileFailureState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -5408,6 +5828,8 @@ class _$FetchLocationByTextState implements FetchLocationByTextState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return fetchLocationByTextState(getLocationByTextModel);
   }
@@ -5467,6 +5889,8 @@ class _$FetchLocationByTextState implements FetchLocationByTextState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return fetchLocationByTextState?.call(getLocationByTextModel);
   }
@@ -5526,6 +5950,8 @@ class _$FetchLocationByTextState implements FetchLocationByTextState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchLocationByTextState != null) {
@@ -5582,6 +6008,7 @@ class _$FetchLocationByTextState implements FetchLocationByTextState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return fetchLocationByTextState(this);
   }
@@ -5624,6 +6051,7 @@ class _$FetchLocationByTextState implements FetchLocationByTextState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return fetchLocationByTextState?.call(this);
   }
@@ -5666,6 +6094,7 @@ class _$FetchLocationByTextState implements FetchLocationByTextState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchLocationByTextState != null) {
@@ -5782,6 +6211,8 @@ class _$ProfileFetchLocationByText implements ProfileFetchLocationByText {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return fetchLocationByText();
   }
@@ -5841,6 +6272,8 @@ class _$ProfileFetchLocationByText implements ProfileFetchLocationByText {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return fetchLocationByText?.call();
   }
@@ -5900,6 +6333,8 @@ class _$ProfileFetchLocationByText implements ProfileFetchLocationByText {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchLocationByText != null) {
@@ -5956,6 +6391,7 @@ class _$ProfileFetchLocationByText implements ProfileFetchLocationByText {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return fetchLocationByText(this);
   }
@@ -5998,6 +6434,7 @@ class _$ProfileFetchLocationByText implements ProfileFetchLocationByText {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return fetchLocationByText?.call(this);
   }
@@ -6040,6 +6477,7 @@ class _$ProfileFetchLocationByText implements ProfileFetchLocationByText {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchLocationByText != null) {
@@ -6197,6 +6635,8 @@ class _$ProfileSaveChanges implements ProfileSaveChanges {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return saveChanges(relativeProfileParams, profileChange, relativeId);
   }
@@ -6256,6 +6696,8 @@ class _$ProfileSaveChanges implements ProfileSaveChanges {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return saveChanges?.call(relativeProfileParams, profileChange, relativeId);
   }
@@ -6315,6 +6757,8 @@ class _$ProfileSaveChanges implements ProfileSaveChanges {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (saveChanges != null) {
@@ -6371,6 +6815,7 @@ class _$ProfileSaveChanges implements ProfileSaveChanges {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return saveChanges(this);
   }
@@ -6413,6 +6858,7 @@ class _$ProfileSaveChanges implements ProfileSaveChanges {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return saveChanges?.call(this);
   }
@@ -6455,6 +6901,7 @@ class _$ProfileSaveChanges implements ProfileSaveChanges {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (saveChanges != null) {
@@ -6597,6 +7044,8 @@ class _$ProfileFetchAllRelatives implements ProfileFetchAllRelatives {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return fetchAllRelatives(getAllRelativeModel);
   }
@@ -6656,6 +7105,8 @@ class _$ProfileFetchAllRelatives implements ProfileFetchAllRelatives {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return fetchAllRelatives?.call(getAllRelativeModel);
   }
@@ -6715,6 +7166,8 @@ class _$ProfileFetchAllRelatives implements ProfileFetchAllRelatives {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchAllRelatives != null) {
@@ -6771,6 +7224,7 @@ class _$ProfileFetchAllRelatives implements ProfileFetchAllRelatives {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return fetchAllRelatives(this);
   }
@@ -6813,6 +7267,7 @@ class _$ProfileFetchAllRelatives implements ProfileFetchAllRelatives {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return fetchAllRelatives?.call(this);
   }
@@ -6855,6 +7310,7 @@ class _$ProfileFetchAllRelatives implements ProfileFetchAllRelatives {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchAllRelatives != null) {
@@ -6997,6 +7453,8 @@ class _$ProfileAddNewRelativeProfile implements ProfileAddNewRelativeProfile {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return addNewRelativeProfile(relativeProfileParams);
   }
@@ -7056,6 +7514,8 @@ class _$ProfileAddNewRelativeProfile implements ProfileAddNewRelativeProfile {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return addNewRelativeProfile?.call(relativeProfileParams);
   }
@@ -7115,6 +7575,8 @@ class _$ProfileAddNewRelativeProfile implements ProfileAddNewRelativeProfile {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (addNewRelativeProfile != null) {
@@ -7171,6 +7633,7 @@ class _$ProfileAddNewRelativeProfile implements ProfileAddNewRelativeProfile {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return addNewRelativeProfile(this);
   }
@@ -7213,6 +7676,7 @@ class _$ProfileAddNewRelativeProfile implements ProfileAddNewRelativeProfile {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return addNewRelativeProfile?.call(this);
   }
@@ -7255,6 +7719,7 @@ class _$ProfileAddNewRelativeProfile implements ProfileAddNewRelativeProfile {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (addNewRelativeProfile != null) {
@@ -7409,6 +7874,8 @@ class _$ProfileEditRelativeProfile implements ProfileEditRelativeProfile {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return editRelativeProfile(relativeProfileParams, relativeId);
   }
@@ -7468,6 +7935,8 @@ class _$ProfileEditRelativeProfile implements ProfileEditRelativeProfile {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return editRelativeProfile?.call(relativeProfileParams, relativeId);
   }
@@ -7527,6 +7996,8 @@ class _$ProfileEditRelativeProfile implements ProfileEditRelativeProfile {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (editRelativeProfile != null) {
@@ -7583,6 +8054,7 @@ class _$ProfileEditRelativeProfile implements ProfileEditRelativeProfile {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return editRelativeProfile(this);
   }
@@ -7625,6 +8097,7 @@ class _$ProfileEditRelativeProfile implements ProfileEditRelativeProfile {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return editRelativeProfile?.call(this);
   }
@@ -7667,6 +8140,7 @@ class _$ProfileEditRelativeProfile implements ProfileEditRelativeProfile {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (editRelativeProfile != null) {
@@ -7836,6 +8310,8 @@ class _$ProfileRemoveRelativeProfile implements ProfileRemoveRelativeProfile {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return removeRelativeProfile(
         relativeProfileParams, dialogButton, relativeId);
@@ -7896,6 +8372,8 @@ class _$ProfileRemoveRelativeProfile implements ProfileRemoveRelativeProfile {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return removeRelativeProfile?.call(
         relativeProfileParams, dialogButton, relativeId);
@@ -7956,6 +8434,8 @@ class _$ProfileRemoveRelativeProfile implements ProfileRemoveRelativeProfile {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (removeRelativeProfile != null) {
@@ -8013,6 +8493,7 @@ class _$ProfileRemoveRelativeProfile implements ProfileRemoveRelativeProfile {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return removeRelativeProfile(this);
   }
@@ -8055,6 +8536,7 @@ class _$ProfileRemoveRelativeProfile implements ProfileRemoveRelativeProfile {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return removeRelativeProfile?.call(this);
   }
@@ -8097,6 +8579,7 @@ class _$ProfileRemoveRelativeProfile implements ProfileRemoveRelativeProfile {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (removeRelativeProfile != null) {
@@ -8254,6 +8737,8 @@ class _$ProfileOpenRemoveDialogBox implements ProfileOpenRemoveDialogBox {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return openRemoveDialogBox(relativeProfileParams, relativeId);
   }
@@ -8313,6 +8798,8 @@ class _$ProfileOpenRemoveDialogBox implements ProfileOpenRemoveDialogBox {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return openRemoveDialogBox?.call(relativeProfileParams, relativeId);
   }
@@ -8372,6 +8859,8 @@ class _$ProfileOpenRemoveDialogBox implements ProfileOpenRemoveDialogBox {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (openRemoveDialogBox != null) {
@@ -8428,6 +8917,7 @@ class _$ProfileOpenRemoveDialogBox implements ProfileOpenRemoveDialogBox {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return openRemoveDialogBox(this);
   }
@@ -8470,6 +8960,7 @@ class _$ProfileOpenRemoveDialogBox implements ProfileOpenRemoveDialogBox {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return openRemoveDialogBox?.call(this);
   }
@@ -8512,6 +9003,7 @@ class _$ProfileOpenRemoveDialogBox implements ProfileOpenRemoveDialogBox {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (openRemoveDialogBox != null) {
@@ -8654,6 +9146,8 @@ class _$ProfileFetchAllRelations implements ProfileFetchAllRelations {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return fetchAllRelations(getAllRelationModel);
   }
@@ -8713,6 +9207,8 @@ class _$ProfileFetchAllRelations implements ProfileFetchAllRelations {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return fetchAllRelations?.call(getAllRelationModel);
   }
@@ -8772,6 +9268,8 @@ class _$ProfileFetchAllRelations implements ProfileFetchAllRelations {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchAllRelations != null) {
@@ -8828,6 +9326,7 @@ class _$ProfileFetchAllRelations implements ProfileFetchAllRelations {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return fetchAllRelations(this);
   }
@@ -8870,6 +9369,7 @@ class _$ProfileFetchAllRelations implements ProfileFetchAllRelations {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return fetchAllRelations?.call(this);
   }
@@ -8912,6 +9412,7 @@ class _$ProfileFetchAllRelations implements ProfileFetchAllRelations {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchAllRelations != null) {
@@ -9066,6 +9567,8 @@ class _$ProfileNoRelationsFoundState implements ProfileNoRelationsFoundState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return noRelationsFound(message, otherData);
   }
@@ -9125,6 +9628,8 @@ class _$ProfileNoRelationsFoundState implements ProfileNoRelationsFoundState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return noRelationsFound?.call(message, otherData);
   }
@@ -9184,6 +9689,8 @@ class _$ProfileNoRelationsFoundState implements ProfileNoRelationsFoundState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (noRelationsFound != null) {
@@ -9240,6 +9747,7 @@ class _$ProfileNoRelationsFoundState implements ProfileNoRelationsFoundState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return noRelationsFound(this);
   }
@@ -9282,6 +9790,7 @@ class _$ProfileNoRelationsFoundState implements ProfileNoRelationsFoundState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return noRelationsFound?.call(this);
   }
@@ -9324,6 +9833,7 @@ class _$ProfileNoRelationsFoundState implements ProfileNoRelationsFoundState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (noRelationsFound != null) {
@@ -9479,6 +9989,8 @@ class _$ProfileNoRelativeFoundState implements ProfileNoRelativeFoundState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return noRelativeFound(message, otherData);
   }
@@ -9538,6 +10050,8 @@ class _$ProfileNoRelativeFoundState implements ProfileNoRelativeFoundState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return noRelativeFound?.call(message, otherData);
   }
@@ -9597,6 +10111,8 @@ class _$ProfileNoRelativeFoundState implements ProfileNoRelativeFoundState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (noRelativeFound != null) {
@@ -9653,6 +10169,7 @@ class _$ProfileNoRelativeFoundState implements ProfileNoRelativeFoundState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return noRelativeFound(this);
   }
@@ -9695,6 +10212,7 @@ class _$ProfileNoRelativeFoundState implements ProfileNoRelativeFoundState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return noRelativeFound?.call(this);
   }
@@ -9737,6 +10255,7 @@ class _$ProfileNoRelativeFoundState implements ProfileNoRelativeFoundState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (noRelativeFound != null) {
@@ -9892,6 +10411,8 @@ class _$ProfileNoLocationFoundState implements ProfileNoLocationFoundState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return noLocationFound(message, otherData);
   }
@@ -9951,6 +10472,8 @@ class _$ProfileNoLocationFoundState implements ProfileNoLocationFoundState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return noLocationFound?.call(message, otherData);
   }
@@ -10010,6 +10533,8 @@ class _$ProfileNoLocationFoundState implements ProfileNoLocationFoundState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (noLocationFound != null) {
@@ -10066,6 +10591,7 @@ class _$ProfileNoLocationFoundState implements ProfileNoLocationFoundState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return noLocationFound(this);
   }
@@ -10108,6 +10634,7 @@ class _$ProfileNoLocationFoundState implements ProfileNoLocationFoundState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return noLocationFound?.call(this);
   }
@@ -10150,6 +10677,7 @@ class _$ProfileNoLocationFoundState implements ProfileNoLocationFoundState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (noLocationFound != null) {
@@ -10321,6 +10849,8 @@ class _$NavigateToRelativeProfilePageState
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return navigateToRelativeProfilePage(
         profileChange, relativeProfileParams, relativeId);
@@ -10381,6 +10911,8 @@ class _$NavigateToRelativeProfilePageState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return navigateToRelativeProfilePage?.call(
         profileChange, relativeProfileParams, relativeId);
@@ -10441,6 +10973,8 @@ class _$NavigateToRelativeProfilePageState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (navigateToRelativeProfilePage != null) {
@@ -10498,6 +11032,7 @@ class _$NavigateToRelativeProfilePageState
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return navigateToRelativeProfilePage(this);
   }
@@ -10540,6 +11075,7 @@ class _$NavigateToRelativeProfilePageState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return navigateToRelativeProfilePage?.call(this);
   }
@@ -10582,6 +11118,7 @@ class _$NavigateToRelativeProfilePageState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (navigateToRelativeProfilePage != null) {
@@ -10729,6 +11266,8 @@ class _$FetchCurrentUserProfileState implements FetchCurrentUserProfileState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return fetchCurrentUserProfile(currentUserProfileModel);
   }
@@ -10788,6 +11327,8 @@ class _$FetchCurrentUserProfileState implements FetchCurrentUserProfileState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return fetchCurrentUserProfile?.call(currentUserProfileModel);
   }
@@ -10847,6 +11388,8 @@ class _$FetchCurrentUserProfileState implements FetchCurrentUserProfileState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchCurrentUserProfile != null) {
@@ -10903,6 +11446,7 @@ class _$FetchCurrentUserProfileState implements FetchCurrentUserProfileState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return fetchCurrentUserProfile(this);
   }
@@ -10945,6 +11489,7 @@ class _$FetchCurrentUserProfileState implements FetchCurrentUserProfileState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return fetchCurrentUserProfile?.call(this);
   }
@@ -10987,6 +11532,7 @@ class _$FetchCurrentUserProfileState implements FetchCurrentUserProfileState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (fetchCurrentUserProfile != null) {
@@ -11130,6 +11676,8 @@ class _$UpdateCurrentUserProfileState implements UpdateCurrentUserProfileState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return updateCurrentUserProfile(currentUserProfileEntity);
   }
@@ -11189,6 +11737,8 @@ class _$UpdateCurrentUserProfileState implements UpdateCurrentUserProfileState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return updateCurrentUserProfile?.call(currentUserProfileEntity);
   }
@@ -11248,6 +11798,8 @@ class _$UpdateCurrentUserProfileState implements UpdateCurrentUserProfileState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfile != null) {
@@ -11304,6 +11856,7 @@ class _$UpdateCurrentUserProfileState implements UpdateCurrentUserProfileState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return updateCurrentUserProfile(this);
   }
@@ -11346,6 +11899,7 @@ class _$UpdateCurrentUserProfileState implements UpdateCurrentUserProfileState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return updateCurrentUserProfile?.call(this);
   }
@@ -11388,6 +11942,7 @@ class _$UpdateCurrentUserProfileState implements UpdateCurrentUserProfileState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfile != null) {
@@ -11544,6 +12099,8 @@ class _$ProfileNoCurrentUserFoundState
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return noCurrentUserFound(message, otherData);
   }
@@ -11603,6 +12160,8 @@ class _$ProfileNoCurrentUserFoundState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return noCurrentUserFound?.call(message, otherData);
   }
@@ -11662,6 +12221,8 @@ class _$ProfileNoCurrentUserFoundState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (noCurrentUserFound != null) {
@@ -11718,6 +12279,7 @@ class _$ProfileNoCurrentUserFoundState
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return noCurrentUserFound(this);
   }
@@ -11760,6 +12322,7 @@ class _$ProfileNoCurrentUserFoundState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return noCurrentUserFound?.call(this);
   }
@@ -11802,6 +12365,7 @@ class _$ProfileNoCurrentUserFoundState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (noCurrentUserFound != null) {
@@ -11960,6 +12524,8 @@ class _$ProfileUpdateCurrentUserFailureState
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return updateCurrentUserProfileFailure(message, otherData);
   }
@@ -12019,6 +12585,8 @@ class _$ProfileUpdateCurrentUserFailureState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return updateCurrentUserProfileFailure?.call(message, otherData);
   }
@@ -12078,6 +12646,8 @@ class _$ProfileUpdateCurrentUserFailureState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfileFailure != null) {
@@ -12134,6 +12704,7 @@ class _$ProfileUpdateCurrentUserFailureState
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return updateCurrentUserProfileFailure(this);
   }
@@ -12176,6 +12747,7 @@ class _$ProfileUpdateCurrentUserFailureState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return updateCurrentUserProfileFailure?.call(this);
   }
@@ -12218,6 +12790,7 @@ class _$ProfileUpdateCurrentUserFailureState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfileFailure != null) {
@@ -12378,6 +12951,8 @@ class _$ProfileUpdateCurrentUserProfileLoadingState
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return updateCurrentUserProfileLoading(message, isLoading);
   }
@@ -12437,6 +13012,8 @@ class _$ProfileUpdateCurrentUserProfileLoadingState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return updateCurrentUserProfileLoading?.call(message, isLoading);
   }
@@ -12496,6 +13073,8 @@ class _$ProfileUpdateCurrentUserProfileLoadingState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfileLoading != null) {
@@ -12552,6 +13131,7 @@ class _$ProfileUpdateCurrentUserProfileLoadingState
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return updateCurrentUserProfileLoading(this);
   }
@@ -12594,6 +13174,7 @@ class _$ProfileUpdateCurrentUserProfileLoadingState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return updateCurrentUserProfileLoading?.call(this);
   }
@@ -12636,6 +13217,7 @@ class _$ProfileUpdateCurrentUserProfileLoadingState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (updateCurrentUserProfileLoading != null) {
@@ -12796,6 +13378,8 @@ class _$RelativeProfileOperationFailureState
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return relativeProfileOperationFailure(message, otherData);
   }
@@ -12855,6 +13439,8 @@ class _$RelativeProfileOperationFailureState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return relativeProfileOperationFailure?.call(message, otherData);
   }
@@ -12914,6 +13500,8 @@ class _$RelativeProfileOperationFailureState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (relativeProfileOperationFailure != null) {
@@ -12970,6 +13558,7 @@ class _$RelativeProfileOperationFailureState
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return relativeProfileOperationFailure(this);
   }
@@ -13012,6 +13601,7 @@ class _$RelativeProfileOperationFailureState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return relativeProfileOperationFailure?.call(this);
   }
@@ -13054,6 +13644,7 @@ class _$RelativeProfileOperationFailureState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (relativeProfileOperationFailure != null) {
@@ -13213,6 +13804,8 @@ class _$RelativeProfileOperationLoadingState
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return relativeProfileOperationLoading(message, isLoading);
   }
@@ -13272,6 +13865,8 @@ class _$RelativeProfileOperationLoadingState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return relativeProfileOperationLoading?.call(message, isLoading);
   }
@@ -13331,6 +13926,8 @@ class _$RelativeProfileOperationLoadingState
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (relativeProfileOperationLoading != null) {
@@ -13387,6 +13984,7 @@ class _$RelativeProfileOperationLoadingState
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return relativeProfileOperationLoading(this);
   }
@@ -13429,6 +14027,7 @@ class _$RelativeProfileOperationLoadingState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return relativeProfileOperationLoading?.call(this);
   }
@@ -13471,6 +14070,7 @@ class _$RelativeProfileOperationLoadingState
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (relativeProfileOperationLoading != null) {
@@ -13615,6 +14215,8 @@ class _$CloseRemoveProfileDialogBox implements CloseRemoveProfileDialogBox {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return closeRemoveProfileDialogBox(message);
   }
@@ -13674,6 +14276,8 @@ class _$CloseRemoveProfileDialogBox implements CloseRemoveProfileDialogBox {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return closeRemoveProfileDialogBox?.call(message);
   }
@@ -13733,6 +14337,8 @@ class _$CloseRemoveProfileDialogBox implements CloseRemoveProfileDialogBox {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (closeRemoveProfileDialogBox != null) {
@@ -13789,6 +14395,7 @@ class _$CloseRemoveProfileDialogBox implements CloseRemoveProfileDialogBox {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return closeRemoveProfileDialogBox(this);
   }
@@ -13831,6 +14438,7 @@ class _$CloseRemoveProfileDialogBox implements CloseRemoveProfileDialogBox {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return closeRemoveProfileDialogBox?.call(this);
   }
@@ -13873,6 +14481,7 @@ class _$CloseRemoveProfileDialogBox implements CloseRemoveProfileDialogBox {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (closeRemoveProfileDialogBox != null) {
@@ -14011,6 +14620,8 @@ class _$SetCurrentGenerState implements SetCurrentGenerState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return setCurrentGenderState(gender);
   }
@@ -14070,6 +14681,8 @@ class _$SetCurrentGenerState implements SetCurrentGenerState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return setCurrentGenderState?.call(gender);
   }
@@ -14129,6 +14742,8 @@ class _$SetCurrentGenerState implements SetCurrentGenerState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (setCurrentGenderState != null) {
@@ -14185,6 +14800,7 @@ class _$SetCurrentGenerState implements SetCurrentGenerState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return setCurrentGenderState(this);
   }
@@ -14227,6 +14843,7 @@ class _$SetCurrentGenerState implements SetCurrentGenerState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return setCurrentGenderState?.call(this);
   }
@@ -14269,6 +14886,7 @@ class _$SetCurrentGenerState implements SetCurrentGenerState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (setCurrentGenderState != null) {
@@ -14435,6 +15053,8 @@ class _$SetCurrentRelationShipState implements SetCurrentRelationShipState {
     required TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)
         setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
   }) {
     return setCurrentRelationShipState(
         relationShip, relationShipId, listOfAllRelations);
@@ -14495,6 +15115,8 @@ class _$SetCurrentRelationShipState implements SetCurrentRelationShipState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
   }) {
     return setCurrentRelationShipState?.call(
         relationShip, relationShipId, listOfAllRelations);
@@ -14555,6 +15177,8 @@ class _$SetCurrentRelationShipState implements SetCurrentRelationShipState {
     TResult Function(String relationShip, int relationShipId,
             List<Relation> listOfAllRelations)?
         setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
     required TResult orElse(),
   }) {
     if (setCurrentRelationShipState != null) {
@@ -14612,6 +15236,7 @@ class _$SetCurrentRelationShipState implements SetCurrentRelationShipState {
     required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
     required TResult Function(SetCurrentRelationShipState value)
         setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
   }) {
     return setCurrentRelationShipState(this);
   }
@@ -14654,6 +15279,7 @@ class _$SetCurrentRelationShipState implements SetCurrentRelationShipState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
   }) {
     return setCurrentRelationShipState?.call(this);
   }
@@ -14696,6 +15322,7 @@ class _$SetCurrentRelationShipState implements SetCurrentRelationShipState {
     TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
     TResult Function(SetCurrentRelationShipState value)?
         setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
     required TResult orElse(),
   }) {
     if (setCurrentRelationShipState != null) {
@@ -14716,4 +15343,423 @@ abstract class SetCurrentRelationShipState implements ProfileState {
   @JsonKey(ignore: true)
   $SetCurrentRelationShipStateCopyWith<SetCurrentRelationShipState>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SetMeridiemStateCopyWith<$Res> {
+  factory $SetMeridiemStateCopyWith(
+          SetMeridiemState value, $Res Function(SetMeridiemState) then) =
+      _$SetMeridiemStateCopyWithImpl<$Res>;
+  $Res call({int selectedMedidiem, List<bool> isSelected});
+}
+
+/// @nodoc
+class _$SetMeridiemStateCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res>
+    implements $SetMeridiemStateCopyWith<$Res> {
+  _$SetMeridiemStateCopyWithImpl(
+      SetMeridiemState _value, $Res Function(SetMeridiemState) _then)
+      : super(_value, (v) => _then(v as SetMeridiemState));
+
+  @override
+  SetMeridiemState get _value => super._value as SetMeridiemState;
+
+  @override
+  $Res call({
+    Object? selectedMedidiem = freezed,
+    Object? isSelected = freezed,
+  }) {
+    return _then(SetMeridiemState(
+      selectedMedidiem == freezed
+          ? _value.selectedMedidiem
+          : selectedMedidiem // ignore: cast_nullable_to_non_nullable
+              as int,
+      isSelected == freezed
+          ? _value.isSelected
+          : isSelected // ignore: cast_nullable_to_non_nullable
+              as List<bool>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetMeridiemState implements SetMeridiemState {
+  const _$SetMeridiemState(this.selectedMedidiem,
+      [this.isSelected = const [true, false]]);
+
+  @override
+  final int selectedMedidiem;
+  @JsonKey()
+  @override
+  final List<bool> isSelected;
+
+  @override
+  String toString() {
+    return 'ProfileState.setMeridiemState(selectedMedidiem: $selectedMedidiem, isSelected: $isSelected)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SetMeridiemState &&
+            const DeepCollectionEquality()
+                .equals(other.selectedMedidiem, selectedMedidiem) &&
+            const DeepCollectionEquality()
+                .equals(other.isSelected, isSelected));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(selectedMedidiem),
+      const DeepCollectionEquality().hash(isSelected));
+
+  @JsonKey(ignore: true)
+  @override
+  $SetMeridiemStateCopyWith<SetMeridiemState> get copyWith =>
+      _$SetMeridiemStateCopyWithImpl<SetMeridiemState>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, bool isLoading) loading,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        failure,
+    required TResult Function(GetLocationByTextModel getLocationByTextModel)
+        fetchLocationByTextState,
+    required TResult Function() fetchLocationByText,
+    required TResult Function(RelativeProfileParams relativeProfileParams,
+            ProfileChange profileChange, String relativeId)
+        saveChanges,
+    required TResult Function(GetAllRelativeModel getAllRelativeModel)
+        fetchAllRelatives,
+    required TResult Function(RelativeProfileParams relativeProfileParams)
+        addNewRelativeProfile,
+    required TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)
+        editRelativeProfile,
+    required TResult Function(RelativeProfileParams relativeProfileParams,
+            DialogButton dialogButton, String relativeId)
+        removeRelativeProfile,
+    required TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)
+        openRemoveDialogBox,
+    required TResult Function(GetAllRelationModel getAllRelationModel)
+        fetchAllRelations,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        noRelationsFound,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        noRelativeFound,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        noLocationFound,
+    required TResult Function(ProfileChange profileChange,
+            RelativeProfileParams? relativeProfileParams, String? relativeId)
+        navigateToRelativeProfilePage,
+    required TResult Function(CurrentUserProfileModel currentUserProfileModel)
+        fetchCurrentUserProfile,
+    required TResult Function(CurrentUserProfileEntity currentUserProfileEntity)
+        updateCurrentUserProfile,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        noCurrentUserFound,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        updateCurrentUserProfileFailure,
+    required TResult Function(String message, bool isLoading)
+        updateCurrentUserProfileLoading,
+    required TResult Function(String message, Map<String, dynamic> otherData)
+        relativeProfileOperationFailure,
+    required TResult Function(String message, bool isLoading)
+        relativeProfileOperationLoading,
+    required TResult Function(String message) closeRemoveProfileDialogBox,
+    required TResult Function(String gender) setCurrentGenderState,
+    required TResult Function(String relationShip, int relationShipId,
+            List<Relation> listOfAllRelations)
+        setCurrentRelationShipState,
+    required TResult Function(int selectedMedidiem, List<bool> isSelected)
+        setMeridiemState,
+  }) {
+    return setMeridiemState(selectedMedidiem, isSelected);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, bool isLoading)? loading,
+    TResult Function(String message, Map<String, dynamic> otherData)? failure,
+    TResult Function(GetLocationByTextModel getLocationByTextModel)?
+        fetchLocationByTextState,
+    TResult Function()? fetchLocationByText,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            ProfileChange profileChange, String relativeId)?
+        saveChanges,
+    TResult Function(GetAllRelativeModel getAllRelativeModel)?
+        fetchAllRelatives,
+    TResult Function(RelativeProfileParams relativeProfileParams)?
+        addNewRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        editRelativeProfile,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            DialogButton dialogButton, String relativeId)?
+        removeRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        openRemoveDialogBox,
+    TResult Function(GetAllRelationModel getAllRelationModel)?
+        fetchAllRelations,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noRelationsFound,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noRelativeFound,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noLocationFound,
+    TResult Function(ProfileChange profileChange,
+            RelativeProfileParams? relativeProfileParams, String? relativeId)?
+        navigateToRelativeProfilePage,
+    TResult Function(CurrentUserProfileModel currentUserProfileModel)?
+        fetchCurrentUserProfile,
+    TResult Function(CurrentUserProfileEntity currentUserProfileEntity)?
+        updateCurrentUserProfile,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noCurrentUserFound,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        updateCurrentUserProfileFailure,
+    TResult Function(String message, bool isLoading)?
+        updateCurrentUserProfileLoading,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        relativeProfileOperationFailure,
+    TResult Function(String message, bool isLoading)?
+        relativeProfileOperationLoading,
+    TResult Function(String message)? closeRemoveProfileDialogBox,
+    TResult Function(String gender)? setCurrentGenderState,
+    TResult Function(String relationShip, int relationShipId,
+            List<Relation> listOfAllRelations)?
+        setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
+  }) {
+    return setMeridiemState?.call(selectedMedidiem, isSelected);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, bool isLoading)? loading,
+    TResult Function(String message, Map<String, dynamic> otherData)? failure,
+    TResult Function(GetLocationByTextModel getLocationByTextModel)?
+        fetchLocationByTextState,
+    TResult Function()? fetchLocationByText,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            ProfileChange profileChange, String relativeId)?
+        saveChanges,
+    TResult Function(GetAllRelativeModel getAllRelativeModel)?
+        fetchAllRelatives,
+    TResult Function(RelativeProfileParams relativeProfileParams)?
+        addNewRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        editRelativeProfile,
+    TResult Function(RelativeProfileParams relativeProfileParams,
+            DialogButton dialogButton, String relativeId)?
+        removeRelativeProfile,
+    TResult Function(
+            RelativeProfileParams relativeProfileParams, String relativeId)?
+        openRemoveDialogBox,
+    TResult Function(GetAllRelationModel getAllRelationModel)?
+        fetchAllRelations,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noRelationsFound,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noRelativeFound,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noLocationFound,
+    TResult Function(ProfileChange profileChange,
+            RelativeProfileParams? relativeProfileParams, String? relativeId)?
+        navigateToRelativeProfilePage,
+    TResult Function(CurrentUserProfileModel currentUserProfileModel)?
+        fetchCurrentUserProfile,
+    TResult Function(CurrentUserProfileEntity currentUserProfileEntity)?
+        updateCurrentUserProfile,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        noCurrentUserFound,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        updateCurrentUserProfileFailure,
+    TResult Function(String message, bool isLoading)?
+        updateCurrentUserProfileLoading,
+    TResult Function(String message, Map<String, dynamic> otherData)?
+        relativeProfileOperationFailure,
+    TResult Function(String message, bool isLoading)?
+        relativeProfileOperationLoading,
+    TResult Function(String message)? closeRemoveProfileDialogBox,
+    TResult Function(String gender)? setCurrentGenderState,
+    TResult Function(String relationShip, int relationShipId,
+            List<Relation> listOfAllRelations)?
+        setCurrentRelationShipState,
+    TResult Function(int selectedMedidiem, List<bool> isSelected)?
+        setMeridiemState,
+    required TResult orElse(),
+  }) {
+    if (setMeridiemState != null) {
+      return setMeridiemState(selectedMedidiem, isSelected);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitialState value) initial,
+    required TResult Function(ProfileLoadingState value) loading,
+    required TResult Function(ProfileFailureState value) failure,
+    required TResult Function(FetchLocationByTextState value)
+        fetchLocationByTextState,
+    required TResult Function(ProfileFetchLocationByText value)
+        fetchLocationByText,
+    required TResult Function(ProfileSaveChanges value) saveChanges,
+    required TResult Function(ProfileFetchAllRelatives value) fetchAllRelatives,
+    required TResult Function(ProfileAddNewRelativeProfile value)
+        addNewRelativeProfile,
+    required TResult Function(ProfileEditRelativeProfile value)
+        editRelativeProfile,
+    required TResult Function(ProfileRemoveRelativeProfile value)
+        removeRelativeProfile,
+    required TResult Function(ProfileOpenRemoveDialogBox value)
+        openRemoveDialogBox,
+    required TResult Function(ProfileFetchAllRelations value) fetchAllRelations,
+    required TResult Function(ProfileNoRelationsFoundState value)
+        noRelationsFound,
+    required TResult Function(ProfileNoRelativeFoundState value)
+        noRelativeFound,
+    required TResult Function(ProfileNoLocationFoundState value)
+        noLocationFound,
+    required TResult Function(NavigateToRelativeProfilePageState value)
+        navigateToRelativeProfilePage,
+    required TResult Function(FetchCurrentUserProfileState value)
+        fetchCurrentUserProfile,
+    required TResult Function(UpdateCurrentUserProfileState value)
+        updateCurrentUserProfile,
+    required TResult Function(ProfileNoCurrentUserFoundState value)
+        noCurrentUserFound,
+    required TResult Function(ProfileUpdateCurrentUserFailureState value)
+        updateCurrentUserProfileFailure,
+    required TResult Function(ProfileUpdateCurrentUserProfileLoadingState value)
+        updateCurrentUserProfileLoading,
+    required TResult Function(RelativeProfileOperationFailureState value)
+        relativeProfileOperationFailure,
+    required TResult Function(RelativeProfileOperationLoadingState value)
+        relativeProfileOperationLoading,
+    required TResult Function(CloseRemoveProfileDialogBox value)
+        closeRemoveProfileDialogBox,
+    required TResult Function(SetCurrentGenerState value) setCurrentGenderState,
+    required TResult Function(SetCurrentRelationShipState value)
+        setCurrentRelationShipState,
+    required TResult Function(SetMeridiemState value) setMeridiemState,
+  }) {
+    return setMeridiemState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ProfileInitialState value)? initial,
+    TResult Function(ProfileLoadingState value)? loading,
+    TResult Function(ProfileFailureState value)? failure,
+    TResult Function(FetchLocationByTextState value)? fetchLocationByTextState,
+    TResult Function(ProfileFetchLocationByText value)? fetchLocationByText,
+    TResult Function(ProfileSaveChanges value)? saveChanges,
+    TResult Function(ProfileFetchAllRelatives value)? fetchAllRelatives,
+    TResult Function(ProfileAddNewRelativeProfile value)? addNewRelativeProfile,
+    TResult Function(ProfileEditRelativeProfile value)? editRelativeProfile,
+    TResult Function(ProfileRemoveRelativeProfile value)? removeRelativeProfile,
+    TResult Function(ProfileOpenRemoveDialogBox value)? openRemoveDialogBox,
+    TResult Function(ProfileFetchAllRelations value)? fetchAllRelations,
+    TResult Function(ProfileNoRelationsFoundState value)? noRelationsFound,
+    TResult Function(ProfileNoRelativeFoundState value)? noRelativeFound,
+    TResult Function(ProfileNoLocationFoundState value)? noLocationFound,
+    TResult Function(NavigateToRelativeProfilePageState value)?
+        navigateToRelativeProfilePage,
+    TResult Function(FetchCurrentUserProfileState value)?
+        fetchCurrentUserProfile,
+    TResult Function(UpdateCurrentUserProfileState value)?
+        updateCurrentUserProfile,
+    TResult Function(ProfileNoCurrentUserFoundState value)? noCurrentUserFound,
+    TResult Function(ProfileUpdateCurrentUserFailureState value)?
+        updateCurrentUserProfileFailure,
+    TResult Function(ProfileUpdateCurrentUserProfileLoadingState value)?
+        updateCurrentUserProfileLoading,
+    TResult Function(RelativeProfileOperationFailureState value)?
+        relativeProfileOperationFailure,
+    TResult Function(RelativeProfileOperationLoadingState value)?
+        relativeProfileOperationLoading,
+    TResult Function(CloseRemoveProfileDialogBox value)?
+        closeRemoveProfileDialogBox,
+    TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
+    TResult Function(SetCurrentRelationShipState value)?
+        setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
+  }) {
+    return setMeridiemState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitialState value)? initial,
+    TResult Function(ProfileLoadingState value)? loading,
+    TResult Function(ProfileFailureState value)? failure,
+    TResult Function(FetchLocationByTextState value)? fetchLocationByTextState,
+    TResult Function(ProfileFetchLocationByText value)? fetchLocationByText,
+    TResult Function(ProfileSaveChanges value)? saveChanges,
+    TResult Function(ProfileFetchAllRelatives value)? fetchAllRelatives,
+    TResult Function(ProfileAddNewRelativeProfile value)? addNewRelativeProfile,
+    TResult Function(ProfileEditRelativeProfile value)? editRelativeProfile,
+    TResult Function(ProfileRemoveRelativeProfile value)? removeRelativeProfile,
+    TResult Function(ProfileOpenRemoveDialogBox value)? openRemoveDialogBox,
+    TResult Function(ProfileFetchAllRelations value)? fetchAllRelations,
+    TResult Function(ProfileNoRelationsFoundState value)? noRelationsFound,
+    TResult Function(ProfileNoRelativeFoundState value)? noRelativeFound,
+    TResult Function(ProfileNoLocationFoundState value)? noLocationFound,
+    TResult Function(NavigateToRelativeProfilePageState value)?
+        navigateToRelativeProfilePage,
+    TResult Function(FetchCurrentUserProfileState value)?
+        fetchCurrentUserProfile,
+    TResult Function(UpdateCurrentUserProfileState value)?
+        updateCurrentUserProfile,
+    TResult Function(ProfileNoCurrentUserFoundState value)? noCurrentUserFound,
+    TResult Function(ProfileUpdateCurrentUserFailureState value)?
+        updateCurrentUserProfileFailure,
+    TResult Function(ProfileUpdateCurrentUserProfileLoadingState value)?
+        updateCurrentUserProfileLoading,
+    TResult Function(RelativeProfileOperationFailureState value)?
+        relativeProfileOperationFailure,
+    TResult Function(RelativeProfileOperationLoadingState value)?
+        relativeProfileOperationLoading,
+    TResult Function(CloseRemoveProfileDialogBox value)?
+        closeRemoveProfileDialogBox,
+    TResult Function(SetCurrentGenerState value)? setCurrentGenderState,
+    TResult Function(SetCurrentRelationShipState value)?
+        setCurrentRelationShipState,
+    TResult Function(SetMeridiemState value)? setMeridiemState,
+    required TResult orElse(),
+  }) {
+    if (setMeridiemState != null) {
+      return setMeridiemState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetMeridiemState implements ProfileState {
+  const factory SetMeridiemState(int selectedMedidiem,
+      [List<bool> isSelected]) = _$SetMeridiemState;
+
+  int get selectedMedidiem;
+  List<bool> get isSelected;
+  @JsonKey(ignore: true)
+  $SetMeridiemStateCopyWith<SetMeridiemState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
