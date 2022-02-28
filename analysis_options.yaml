@@ -1,0 +1,24 @@
+include: package:very_good_analysis/analysis_options.2.4.0.yaml
+analyzer:
+  exclude:
+    - "build/**"
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "lib/generated_plugin_registrant.dart"
+  language:
+    strict-raw-types: true
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: true
+  errors:
+    invalid_annotation_target: ignore
+    argument_type_not_assignable: ignore
+    invalid_assignment: ignore
+    map_value_type_not_assignable: ignore
+    return_of_invalid_type: ignore
+linter:
+  rules:
+    public_member_api_docs: false
+    sort_pub_dependencies: true
+    prefer_const_constructors: false
+    implicit-dynamic: true
