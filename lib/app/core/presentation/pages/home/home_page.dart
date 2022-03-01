@@ -1,3 +1,4 @@
+import 'package:astro_people/app/common/const/strings.dart';
 import 'package:astro_people/app/core/presentation/pages/home/ask_question_page.dart';
 import 'package:astro_people/app/core/presentation/widgets/appbar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -100,31 +101,31 @@ class _HomePageState extends State<HomePage> {
             icon: ImageIcon(
               AssetImage('assets/media/images/home.png'),
             ),
-            label: 'Home',
+            label: Strings.Home,
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/media/images/talk.png'),
             ),
-            label: 'Talk',
+            label: Strings.Talk,
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/media/images/ask.png'),
             ),
-            label: 'Ask Question',
+            label: Strings.Ask_Question,
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/media/images/reports.png'),
             ),
-            label: 'Reports',
+            label: Strings.Reports,
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/media/images/chat.png'),
             ),
-            label: 'Chart',
+            label: Strings.Chat,
           ),
         ],
         currentIndex: _selectedIndex,

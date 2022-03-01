@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:astro_people/app/common/common.dart';
+import 'package:astro_people/app/common/const/strings.dart';
 import 'package:astro_people/app/common/enum/dialog.dart';
 import 'package:astro_people/app/common/style/style.dart';
 import 'package:astro_people/app/core/domain/entities/entities.dart';
@@ -221,7 +222,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                           children: [
                             Flexible(
                               child: FormTextFieldWidget(
-                                headlineText: 'Name',
+                                headlineText: Strings.Name,
                                 child: TextFormField(
                                   key: Key('nameTextEditingController'),
                                   controller: nameTextEditingController,
@@ -235,7 +236,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                       fillColor: textFormFieldFilledColor,
                                       contentPadding:
                                           textFormFieldContentPadding,
-                                      hintText: 'Name',
+                                      hintText: Strings.Name,
                                       border: textFormFieldBorder),
                                   autovalidateMode:
                                       AutovalidateMode.onUserInteraction,
@@ -248,7 +249,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                 children: [
                                   Flexible(
                                     child: FormTextFieldWidget(
-                                      headlineText: 'Date of Birth',
+                                      headlineText: Strings.Date_Of_Birth,
                                       child: TextFormField(
                                         key: Key('dayTextEditingController'),
                                         controller: dayTextEditingController,
@@ -344,7 +345,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                 children: [
                                   Flexible(
                                     child: FormTextFieldWidget(
-                                      headlineText: 'Time of Birth',
+                                      headlineText: Strings.Time_Of_Birth,
                                       child: TextFormField(
                                         key: Key('hourTextEditingController'),
                                         controller: hourTextEditingController,
@@ -434,7 +435,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Text(
-                                      'Place of Birth',
+                                      Strings.Place_of_Birth,
                                       style: Theme.of(context)
                                           .textTheme
                                           .labelLarge!
@@ -507,7 +508,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Text(
-                                            'Gender',
+                                            Strings.Gender,
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .labelLarge!
@@ -566,7 +567,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Text(
-                                            'Relation',
+                                            Strings.Relation,
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .labelLarge!
@@ -625,7 +626,7 @@ class _RelativeProfilePageState extends State<RelativeProfilePage> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     fixedSize: Size(64, 48)),
-                                child: Text('Save Changes'),
+                                child: Text(Strings.Save_Changes),
                               ),
                             ),
                             SizedBox(
