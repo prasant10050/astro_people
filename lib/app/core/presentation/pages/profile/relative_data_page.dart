@@ -1,3 +1,4 @@
+import 'package:astro_people/app/common/const/strings.dart';
 import 'package:astro_people/app/common/enum/dialog.dart';
 import 'package:astro_people/app/core/domain/entities/entities.dart';
 import 'package:astro_people/app/core/presentation/manager/profile/profile_bloc.dart';
@@ -38,7 +39,7 @@ class _RelativeDataPageState extends State<RelativeDataPage> {
                 ),
                 minimumSize:
                     Size(MediaQuery.of(context).size.width / 2 - 40, 42.0)),
-            child: Text('+ Add New Profile'),
+            child: Text(Strings.Add_New_Profile),
           ),
         ],
       ),
@@ -56,10 +57,10 @@ class _RelativeDataPageState extends State<RelativeDataPage> {
 
   List<DataColumn> _createColumns() {
     return [
-      DataColumn(label: Text('Name')),
-      DataColumn(label: Text('DOB')),
-      DataColumn(label: Text('TOB')),
-      DataColumn(label: Text('Relation')),
+      DataColumn(label: Text(Strings.Name)),
+      DataColumn(label: Text(Strings.Dob)),
+      DataColumn(label: Text(Strings.Tob)),
+      DataColumn(label: Text(Strings.Relation)),
       DataColumn(label: Text('')),
       DataColumn(label: Text(''))
     ];

@@ -1,3 +1,4 @@
+import 'package:astro_people/app/common/const/strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +21,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
   List<Widget> childWidgets =
       []; //The Widgets that has to be loaded when a tab is selected.
   List<String> textCupertinoTabs = [
-    'Basic Profile',
-    'Friends & Family Profile'
+    Strings.Basic_Profile,
+    Strings.Friends_Family_Profile,
   ];
   @override
   void initState() {
@@ -66,7 +67,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
   }
 
   void loadCupertinoTabs() {
-    map = Map();
+    map = {};
     for (var index = 0; index < textCupertinoTabs.length; index++) {
       //putIfAbsent takes a key and a function callback that has return a value to that key.
       // In our example, since the Map is of type <int,Widget> we have to return widget.

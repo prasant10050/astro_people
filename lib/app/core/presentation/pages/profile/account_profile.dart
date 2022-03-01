@@ -1,3 +1,4 @@
+import 'package:astro_people/app/common/const/strings.dart';
 import 'package:astro_people/app/core/presentation/pages/profile/order_history_page.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,10 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
           ],
           bottom: TabBar(
             isScrollable: true,
-            tabs: const [Tab(text: 'My Profile'), Tab(text: 'Order History')],
+            tabs: const [
+              Tab(text: Strings.My_Profile),
+              Tab(text: Strings.Order_History)
+            ],
           ),
         ),
         body: SafeArea(

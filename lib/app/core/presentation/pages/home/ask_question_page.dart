@@ -1,5 +1,6 @@
 import 'package:astro_people/app/common/common.dart';
 import 'package:astro_people/app/common/const/app_colors.dart';
+import 'package:astro_people/app/common/const/strings.dart';
 import 'package:astro_people/app/core/presentation/manager/home/home_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -118,7 +119,7 @@ class _HomePageState extends State<AskQuestionPage> {
                           padding: EdgeInsets.only(
                               top: 72, bottom: 4, left: 12, right: 12),
                           child: Text(
-                            'Ask a Question',
+                            Strings.Ask_a_Question,
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium!
@@ -203,7 +204,7 @@ class _HomePageState extends State<AskQuestionPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Wallet Balance: \u20B9 0',
+                            Strings.Wallet_Balance,
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium!
@@ -221,7 +222,7 @@ class _HomePageState extends State<AskQuestionPage> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                            child: const Text('Add Money'),
+                            child: const Text(Strings.Add_Money),
                           ),
                         ],
                       ),
@@ -247,7 +248,7 @@ class _HomePageState extends State<AskQuestionPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '\u20B9 ${priceOfSelectedCategory} ( 1 Question on $selectedCategory )',
+                              '${Strings.Rupee_Symbol} ${priceOfSelectedCategory} ( 1 Question on $selectedCategory )',
                               style: Theme.of(context)
                                   .textTheme
                                   .titleMedium!
